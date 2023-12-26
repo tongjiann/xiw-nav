@@ -1,0 +1,24 @@
+<script setup lang="ts">
+
+import SidebarCategory from "./SidebarCategory.vue";
+</script>
+
+<template>
+  <div class="sidebar">
+    <SidebarCategory/>
+    <SidebarCategory/>
+    <SidebarCategory/>
+    <SidebarCategory/>
+  </div>
+</template>
+
+<style scoped>
+.sidebar {
+  width: 15%;
+  height: 100%;
+  background-image: linear-gradient(
+      135deg, #00ffff 20%, #ffffff 70%);
+  opacity: 0.6;
+}
+
+</style>

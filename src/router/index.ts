@@ -1,21 +1,13 @@
-import {createRouter, createWebHashHistory} from `vue-router`
-import Layout from '../views/Layout/index.vue'
-import Home from '../views/Home/index.vue'
+import {createRouter, createWebHashHistory} from "vue-router"
+import Nav from '../views/Nav/index.vue'
 
 const router = createRouter({
     history: createWebHashHistory(import.meta.env.BASE_URL),
     routes: [
         {
             path: '/',
-            name: 'layout',
-            component: Layout,
-            children: [
-                {
-                    path: '',
-                    name: 'home',
-                    component: Home
-                },
-            ]
+            name: 'nav',
+            component: Nav,
         },
 
     ],
