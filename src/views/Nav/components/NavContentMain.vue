@@ -7,7 +7,7 @@
       <img src="/src/assets/icon.png" alt="HUAN" width="16px" height="16px">
       <span class="nav-content-main-name">名称称称称称称称称</span>
     </div>
-    <div class="nav-content-main-comment">
+    <div class="nav-content-main-description">
       <span>描述描述描述描述描述描述描述</span>
     </div>
   </div>
@@ -47,7 +47,10 @@ span {
   -webkit-line-clamp: 1; /* 显示的行数 */
   -webkit-box-orient: vertical;
 }
-
-img {
+.nav-content-main-description{
+    font-size: 14px;
+    line-height: 24px;
+  color: rgba(0,0,0,.38)!important;
 }
+
 </style>
