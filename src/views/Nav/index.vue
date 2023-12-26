@@ -6,15 +6,21 @@ import NavMain from "./components/NavMain.vue";
 
 <template>
   <div class="nav">
-    <NavHeader/>
-    <NavMain/>
+    <header class="header">
+      <NavHeader/>
+    </header>
+    <div class="main">
+      <NavMain/>
+    </div>
   </div>
 </template>
 
 <style scoped lang="scss">
-.nav {
-  overflow-y: auto; /* 在需要时显示纵向滚动条 */
-  max-height: 100%; /* 或者设置具体的最大高度 */
+.header {
+  height: 10vh;
 }
 
+.main {
+  height: 90vh;
+}
 </style>

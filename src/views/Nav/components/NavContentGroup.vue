@@ -15,17 +15,26 @@ import NavContentMain from "./NavContentMain.vue";
       <NavContentMain/>
       <NavContentMain/>
       <NavContentMain/>
+      <NavContentMain/>
+      <NavContentMain/>
     </div>
   </div>
 </template>
-
 <style scoped>
 .nav-content-group-top {
   display: flex;
+  align-items: baseline;
+  margin: 0 20px;
+  color: rgba(0,0,0,.87);;
 }
 
 .nav-content-group-name {
   margin-right: 10px;
+  font-size: 20px;
+}
+
+.nav-content-group-comment {
+  font-size: 12px;
 }
 
 .nav-content-main-group {
@@ -33,5 +42,4 @@ import NavContentMain from "./NavContentMain.vue";
   flex-wrap: wrap;
   width: 100%;
 }
-
 </style>

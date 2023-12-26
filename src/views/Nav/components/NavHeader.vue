@@ -11,7 +11,6 @@
 <style scoped>
 .header{
   background-color: rgb(78, 83, 161);
-  height: 90px;
 }
 .logo{
   font-size: 60px;
