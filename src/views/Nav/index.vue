@@ -13,9 +13,8 @@ import NavMain from "./components/NavMain.vue";
 
 <style scoped lang="scss">
 .nav {
-  height: 100vh;
-  width: 100vw;
-  display: block;
+  overflow-y: auto; /* 在需要时显示纵向滚动条 */
+  max-height: 100%; /* 或者设置具体的最大高度 */
 }
 
 </style>
