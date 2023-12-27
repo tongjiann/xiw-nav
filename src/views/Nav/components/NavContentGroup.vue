@@ -1,13 +1,20 @@
 <script setup lang="ts">
 
 import NavContentMain from "./NavContentMain.vue";
+import {useCategoryStore} from "../../../stores/categoryStore.ts";
 
 defineProps<{ category: Category }>()
+
+const categoryStore = useCategoryStore()
+
+function updateCurrentCategory(category: Category) {
+  categoryStore.setCurrentCategory(category)
+}
 
 </script>
 
 <template>
-  <div class="nav-content-group">
+  <div class="nav-content-group" @mouseenter="updateCurrentCategory(category)">
     <div class="nav-content-group-top">
       <div class="nav-content-group-name">{{ category.name }}</div>
       <div class="nav-content-group-comment">{{ category.description }}</div>
@@ -43,7 +50,8 @@ defineProps<{ category: Category }>()
   flex-wrap: wrap;
   width: 100%;
 }
-.nav-content-group{
-width: 95%;
+
+.nav-content-group {
+  width: 95%;
 }
 </style>
