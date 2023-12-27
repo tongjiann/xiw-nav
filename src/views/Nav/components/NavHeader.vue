@@ -13,7 +13,7 @@
   background-color: rgb(78, 83, 161);
 }
 .logo{
-  font-size: 60px;
+  font-size: 30px;
   color: #00ffff;
   text-align: left;
   padding: 0 20px;

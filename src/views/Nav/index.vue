@@ -17,10 +17,10 @@ import NavMain from "./components/NavMain.vue";
 
 <style scoped lang="scss">
 .header {
-  height: 10vh;
+  height: 5vh;
 }
 
 .main {
-  height: 90vh;
+  height: 95vh;
 }
 </style>

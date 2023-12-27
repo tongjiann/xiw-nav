@@ -1,10 +1,12 @@
 <script setup lang="ts">
+defineProps<{ category: Category }>()
+
 
 </script>
 
 <template>
   <div class="sidebar-category">
-    边栏分类
+    {{ category.name}}
   </div>
 </template>
 

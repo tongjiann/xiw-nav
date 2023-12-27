@@ -1,14 +1,34 @@
 <script setup lang="ts">
+import {ref} from "vue";
 
+defineProps<{ navItem: Nav }>()
+
+const isMouseOver = ref(false)
+
+function addHoverClass() {
+  isMouseOver.value = true
+}
+
+function removeHoverClass() {
+  isMouseOver.value = false
+}
+
+function redirectToExternalLink(url: string) {
+  window.location.href = url
+}
 </script>
 <template>
-  <div class="nav-content-main">
+  <div class="nav-content-main"
+       :class="{focus : isMouseOver}"
+       @mouseover="addHoverClass"
+       @mouseout="removeHoverClass"
+       @click="redirectToExternalLink(navItem.url)">
     <div class="nav-content-main-primary">
       <img src="/src/assets/icon.png" alt="HUAN" width="16px" height="16px">
-      <span class="nav-content-main-name">名称称称称称称称称</span>
+      <span class="nav-content-main-name">{{ navItem.name }}</span>
     </div>
     <div class="nav-content-main-description">
-      <span>描述描述描述描述描述描述描述</span>
+      <span>{{ navItem.description }}</span>
     </div>
   </div>
 </template>
@@ -47,10 +67,17 @@ span {
   -webkit-line-clamp: 1; /* 显示的行数 */
   -webkit-box-orient: vertical;
 }
-.nav-content-main-description{
-    font-size: 14px;
-    line-height: 24px;
-  color: rgba(0,0,0,.38)!important;
+
+.nav-content-main-description {
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, .38) !important;
+}
+
+.focus {
+  cursor: pointer;
+  opacity: 1;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12)
 }
 
 </style>
